@@ -1,7 +1,7 @@
 const express = require("express");
 
-//Porta TCP do servidor HTTP da aplicação
-const PORT = 3000;
+//Porta TCP do servidor HTTP da aplicação (numero de porta infinito para não dar conflito com a nova aplicação)
+const PORT = 100000000000;
 
 /* Método express.get necessita de dois parâmetros
  Na ARROW FUNCTION (=>), o primeiro são os dados do servidor (REQUISITION - 'req')
