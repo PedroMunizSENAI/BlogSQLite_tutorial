@@ -6,6 +6,8 @@ const PORT = 8000;
 const app = express();
 
 const index = "<a href='/sobre'>Sobre</a><a href='/info'>Info</a>";
+const sobre = "Você está na página 'Sobre'<br><a href='/'>Voltar</a>";
+const info = "Você está na página 'Info'<br><a href='/'>Voltar</a>";
 
 /* Método express.get necessita de dois parâmetros
  Na ARROW FUNCTION (=>), o primeiro são os dados do servidor (REQUISITION - 'req')
@@ -16,11 +18,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/sobre", (req, res) => {
-  res.send("Você está na página Sobre");
+  res.send(sobre);
 });
 
 app.get("/info", (req, res) => {
-  res.send("Você está na página Info");
+  res.send(info);
 });
 
 // app listen() deve ser o último comando da aplicação (hel]loworld.js)
