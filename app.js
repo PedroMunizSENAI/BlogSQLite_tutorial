@@ -2,6 +2,7 @@ const express = require("express"); //Importa biblioteca express
 const sqlite3 = require("sqlite3"); //Importa biblioteca express
 
 const app = express(); //Instância para uso do Express
+
 //Cria conexão com o Banco de Dados
 const db = new sqlite3.Database("user.db"); //Instância para uso do SqLite
 
@@ -15,7 +16,11 @@ db.serialize(() => {
   );
 });
 
-const home =
+app.use("/static", express.static(__dirname + "/static"));
+
+//Configurar EJS como o motor de visualização
+app.set("view engine", "ejs");
+const index =
   "<a href='/'> Home </a><a href='/sobre'> Sobre </a><a href='/login'> Login </a><a href='/cadastro'> Cadastro </a>";
 const sobre = "Você está na página 'Sobre' <br><a href='/'>Voltar</a>";
 const login = "Você está na página 'Login' <br><a href='/'>Voltar</a>";
@@ -26,7 +31,7 @@ const cadastro = "Você está na página 'Cadastro' <br><a href='/'>Voltar</a>";
  o segundo são os dados que serão enviados aos clientes (RESULT - 'res')
 */
 app.get("/", (req, res) => {
-  res.send(home);
+  res.render("index");
 });
 
 app.get("/sobre", (req, res) => {
@@ -34,7 +39,11 @@ app.get("/sobre", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.send(login);
+  res.render("login");
+});
+
+app.post("/login", (res, res) => {
+  res.send();
 });
 
 app.get("/cadastro", (req, res) => {

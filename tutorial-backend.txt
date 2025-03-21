@@ -13,3 +13,10 @@ COMO INICIAR UM PROJETO "node.js"
 FUNCIONAMENTO "express.js"
 -Implementa rotas, middlewares e renderização de páginas por templates
 --middleware: termo usado para identificar extensões a uma lib existente, as rotas e renderização são considerados "middlewres". É como se fosse uma extensão do VsCode, ajudando na seção de rotas do projeto.
+
+No "expressjs", para configurar uma pasta, no sistema de arquivo, o método utilizado é o ".use". Este método necessita de dois parâmetros, o primeiro é como o HTTP irá requisitar o arquivo, ou seja, este parâmetro fará parte da URL que o Browser(cliente) irá solicitar.
+O segundo parâmetro é o caminho da pasta, no sistema de arquivos de sistema operacional em que o back-end está rodando, portanto deve-se obedecer as regras do sistema de arquivo do S.O. exemplo:
+app.use("/static", express.static(__dirname + "/static"))
+-"/static": endpoint que o cliente irá visualizar;
+-"express.static": middleware p/ configurar uma pasta de arquivos estaticos;
+-"__dirname": variavel interna do "node.js", ela identifica a pasta do programa no S.O.
