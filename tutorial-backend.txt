@@ -5,3 +5,5 @@ COMO INICIAR UM PROJETO "node.js"
 -para instalar as bibliotecas de um projeto já existente, localize a pasta raiz do projeto e digite npm install (sem parâmetros) no console
 
 -após iniciar o pojeto, criar um arquivo git.ignore na pasta raiz do projeto para ignorar arquivos que poderão sobrecarregar seu projeto (como "node_modules" e arquivos do banco de dados)
+
+*A PASTA RAIZ DO ARQUIVO CLONADO NÃO PODE TER O MESMO NOME DE UMA PASTA RAIZ JÁ EXISTENTE NO SEU LOCAL
