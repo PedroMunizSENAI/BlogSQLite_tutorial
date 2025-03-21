@@ -1,0 +1,7 @@
+COMO INICIAR UM PROJETO "node.js"
+-npm init (Digitar no console na raiz do projeto)
+-npm install <bibliotecas> ou npm i <bibliotecas> (Instalar bibliotecas)
+--o npm init cria o arquivo "package.json"; este arquivo é usado pelo npm/node para administrar os módulos/bibliotecas.
+-para instalar as bibliotecas de um projeto já existente, localize a pasta raiz do projeto e digite npm install (sem parâmetros) no console
+
+-após iniciar o pojeto, criar um arquivo git.ignore na pasta raiz do projeto para ignorar arquivos que poderão sobrecarregar seu projeto (como "node_modules" e arquivos do banco de dados)
