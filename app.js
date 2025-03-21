@@ -2,18 +2,18 @@ const express = require("express"); //Importa biblioteca express
 const sqlite3 = require("sqlite3"); //Importa biblioteca express
 
 const app = express(); //Instância para uso do Express
+//Cria conexão com o Banco de Dados
 const db = new sqlite3.Database("user.db"); //Instância para uso do SqLite
 
-//Cria conexão com o Banco de Dados
+//Porta TCP do servidor HTTP da aplicação
+const PORT = 8000;
+
 db.serialize(() => {
   //Esse método permite enviar comandos SQL em modo 'sequencial'
   db.run(
     "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)"
   );
 });
-
-//Porta TCP do servidor HTTP da aplicação
-const PORT = 8000;
 
 const home =
   "<a href='/'> Home </a><a href='/sobre'> Sobre </a><a href='/login'> Login </a><a href='/cadastro'> Cadastro </a>";

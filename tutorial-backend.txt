@@ -7,3 +7,9 @@ COMO INICIAR UM PROJETO "node.js"
 -após iniciar o pojeto, criar um arquivo git.ignore na pasta raiz do projeto para ignorar arquivos que poderão sobrecarregar seu projeto (como "node_modules" e arquivos do banco de dados)
 
 *A PASTA RAIZ DO ARQUIVO CLONADO NÃO PODE TER O MESMO NOME DE UMA PASTA RAIZ JÁ EXISTENTE NO SEU LOCAL
+
+-------------------------------------------------------------------
+
+FUNCIONAMENTO "express.js"
+-Implementa rotas, middlewares e renderização de páginas por templates
+--middleware: termo usado para identificar extensões a uma lib existente, as rotas e renderização são considerados "middlewres". É como se fosse uma extensão do VsCode, ajudando na seção de rotas do projeto.
